@@ -27,23 +27,17 @@ order: 1
 <div class="section main">
 	<div class="container">
 		<div class="row" id="gallery">
-			{% assign coll = site.collections | where: "label", "home" | first %}
-			{% assign list = coll.files | sort: "basename" %}
-			<!--{% assign l = coll.files.size | divided_by: 2 | ceil %}-->
-			<div class="column">
-				{% for image in list limit: 1 %}
-				<article class="thumb">
-					<img class="lozad u-max-full-width" data-src="{{ coll.label | append: '/' | append: image.name }}" alt="{{ image.basename }}" />
-				</article>
-				{% endfor %}
-			</div>
-			<!--<div class="one-half column">
-				{% for image in list offset: l %}
-				<article class="thumb">
-					<img class="lozad u-max-full-width" data-src="{{ coll.label | append: '/' | append: image.name }}" alt="{{ image.basename }}" />
-				</article>
-				{% endfor %}
-			</div>-->
-		</div>
-	</div>
+  <div class="container">
+    <div class="column">
+      <article class="thumb">
+        <img class="lazyload u-max-full-width" data-src="https://pub-725f084f4f9e40dd9cf5c2aed5a4cc84.r2.dev/5D4_0475-%E7%BC%96%E8%BE%91.jpg" alt="作品1" />
+      </article>
+      <article class="thumb">
+        <img class="lazyload u-max-full-width" data-src="https://pub-725f084f4f9e40dd9cf5c2aed5a4cc84.r2.dev/5D4_1497-%E7%BC%96%E8%BE%91-%E7%BC%96%E8%BE%91.jpg" alt="作品2" />
+      </article>
+      <article class="thumb">
+        <img class="lazyload u-max-full-width" data-src="https://pub-725f084f4f9e40dd9cf5c2aed5a4cc84.r2.dev/5D4_3243-%E7%BC%96%E8%BE%91-%E7%BC%96%E8%BE%91.jpg" alt="作品3" />
+      </article>
+    </div>
+  </div>
 </div>
